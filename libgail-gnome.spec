@@ -2,7 +2,7 @@
 
 Summary: Dynamic libraries for for libgail-gnome
 Name: libgail-gnome
-Version: 1.18.0
+Version: 1.19.5
 Release: %mkrel 1
 Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 License: LGPL
