@@ -1,8 +1,9 @@
-%define lib_name %{_lib}gail-gnome
+%define lib_name %mklibname gail-gnome
+%define develname %mklibname -d gail-gnome
 
 Summary: Dynamic libraries for for libgail-gnome
 Name: libgail-gnome
-Version: 1.19.5
+Version: 1.20.0
 Release: %mkrel 1
 Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 License: LGPL
@@ -19,8 +20,7 @@ Provides: libgail-gnome0
 %description
 Gail is the GNOME Accessibility Implementation Library
 
-%if %_lib != lib 
-
+%if %_lib != lib
 %package -n %{lib_name}
 Summary:	%{summary}
 Group:		%{group}
@@ -29,8 +29,7 @@ Group:		%{group}
 Gail is the GNOME Accessibility Implementation Library
 %endif
 
-
-%package -n %{lib_name}-devel
+%package -n %develname
 Summary:	Static libraries, include files for libgail-gnome
 Group:		Development/GNOME and GTK+
 Provides:	%{name}-devel = %{version}-%{release}
@@ -38,7 +37,7 @@ Requires:	%{lib_name} = %{version}
 Obsoletes:  libgail-gnome0-devel
 Provides:   libgail-gnome0-devel
 
-%description -n %{lib_name}-devel
+%description -n %develname
 Gail is the GNOME Accessibility Implementation Library
 
 
@@ -66,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %{_libdir}/gtk-2.0/modules/*.so
 
-%files -n %{lib_name}-devel
+%files -n %develname
 %defattr(-,root,root)
 %{_libdir}/pkgconfig/*
 
