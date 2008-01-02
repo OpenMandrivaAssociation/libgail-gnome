@@ -9,6 +9,7 @@ Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz
 License: LGPL
 Url: http://developer.gnome.org/projects/gap/
 Group: Accessibility
+BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires: atk-devel >= 1.7.2
 BuildRequires: at-spi-devel
 Buildrequires: libgnomeui2-devel
