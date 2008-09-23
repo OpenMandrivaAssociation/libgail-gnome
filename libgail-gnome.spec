@@ -15,7 +15,7 @@ BuildRequires: at-spi-devel
 Buildrequires: libgnomeui2-devel
 BuildRequires: libpanel-applet-2-devel
 #gw libtool dep:
-BuildRequires: libxtst-devel
+BuildRequires: libxtst-devel libglade2.0-devel
 Obsoletes: libgail-gnome0
 Provides: libgail-gnome0
 
