@@ -3,8 +3,8 @@
 
 Summary: Dynamic libraries for for libgail-gnome
 Name: libgail-gnome
-Version: 1.20.1
-Release: %mkrel 4
+Version: 1.20.2
+Release: %mkrel 1
 Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 License: LGPLv2+
 Url: http://developer.gnome.org/projects/gap/
