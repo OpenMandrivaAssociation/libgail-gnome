@@ -3,7 +3,7 @@
 
 Summary: Dynamic libraries for for libgail-gnome
 Name: libgail-gnome
-Version: 1.20.2
+Version: 1.20.3
 Release: %mkrel 1
 Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 License: LGPLv2+
@@ -18,6 +18,7 @@ BuildRequires: libpanel-applet-2-devel
 BuildRequires: libxtst-devel libglade2.0-devel
 Obsoletes: libgail-gnome0
 Provides: libgail-gnome0
+Requires:	%{name}-common >= %{version}
 
 %description
 Gail is the GNOME Accessibility Implementation Library
@@ -26,10 +27,19 @@ Gail is the GNOME Accessibility Implementation Library
 %package -n %{lib_name}
 Summary:	%{summary}
 Group:		%{group}
+Requires:	%{name}-common >= %{version}
 
 %description -n %{lib_name}
 Gail is the GNOME Accessibility Implementation Library
 %endif
+
+%package common
+Summary:	%{summary}
+Group:		%{group}
+
+%description common
+Gail is the GNOME Accessibility Implementation Library.
+This package contains files used by libgail-gnome.
 
 %package -n %develname
 Summary:	Static libraries, include files for libgail-gnome
@@ -71,4 +81,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %{_libdir}/pkgconfig/*
 
-
+%files common
+%defattr(-,root,root)
+%{_sysconfdir}/gconf/schemas/*.schemas
