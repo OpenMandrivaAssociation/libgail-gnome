@@ -63,15 +63,15 @@ Gail is the GNOME Accessibility Implementation Library
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %makeinstall_std
 
 #remove unpackaged files
-rm -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/modules/*.la
+rm -f %{buildroot}%{_libdir}/gtk-2.0/modules/*.la
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files -n %{lib_name}
 %defattr(-,root,root)
