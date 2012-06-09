@@ -4,16 +4,20 @@
 Summary: Dynamic libraries for for libgail-gnome
 Name: libgail-gnome
 Version: 1.20.4
-Release: %mkrel 3
+Release: 4
 Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
+Patch0: libgail-gnome-1.20.4-compile.patch
 License: LGPLv2+
 Url: http://developer.gnome.org/projects/gap/
 Group: System/Libraries
-BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
-BuildRequires: atk-devel >= 1.7.2
-BuildRequires: at-spi-devel
-Buildrequires: libgnomeui2-devel
-BuildRequires: libpanel-applet-2-devel
+BuildRequires: pkgconfig(atk)
+BuildRequires: pkgconfig(gtk+-2.0)
+BuildRequires: pkgconfig(libbonobo-2.0)
+BuildRequires: pkgconfig(libbonoboui-2.0)
+BuildRequires: pkgconfig(libgnomeui-2.0)
+BuildRequires: pkgconfig(libpanelapplet-4.0)
+BuildRequires: pkgconfig(libspi-1.0)
+BuildRequires: pkgconfig(cspi-1.0)
 #gw libtool dep:
 BuildRequires: libxtst-devel libglade2.0-devel
 Obsoletes: libgail-gnome0
@@ -55,6 +59,11 @@ Gail is the GNOME Accessibility Implementation Library
 
 %prep
 %setup -q
+%apply_patches
+libtoolize --force
+aclocal
+automake -a
+autoconf
 
 %build
 
