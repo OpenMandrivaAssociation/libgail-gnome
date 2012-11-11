@@ -1,0 +1,11 @@
+--- libgail-gnome-1.20.4/configure.in.bero	2012-06-09 11:41:40.171207308 +0200
++++ libgail-gnome-1.20.4/configure.in	2012-06-09 11:41:45.929207335 +0200
+@@ -106,7 +106,7 @@ GTK_PACKAGES="gtk+-2.0"
+ LIBBONOBO_PACKAGES="libbonobo-2.0"
+ LIBBONOBOUI_PACKAGES="libbonoboui-2.0"
+ LIBGNOMEUI_PACKAGES="libgnomeui-2.0"
+-PANEL_APPLET_PACKAGES="libpanelapplet-2.0"
++PANEL_APPLET_PACKAGES="libpanelapplet-4.0"
+ AT_SPI_PACKAGES="libspi-1.0"
+ CSPI_PACKAGES="cspi-1.0"
+ ATK_REQUIRED_VERSION=1.7.2
