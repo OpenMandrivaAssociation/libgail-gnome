@@ -4,12 +4,11 @@
 Summary: Dynamic libraries for for libgail-gnome
 Name: libgail-gnome
 Version: 1.20.4
-Release: %mkrel 4
+Release: 5
 Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 License: LGPLv2+
 Url: http://developer.gnome.org/projects/gap/
 Group: System/Libraries
-BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires: atk-devel >= 1.7.2
 BuildRequires: at-spi-devel
 Buildrequires: libgnomeui2-devel
