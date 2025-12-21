@@ -9,6 +9,11 @@ Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz
 License: LGPLv2+
 Url: https://developer.gnome.org/projects/gap/
 Group: System/Libraries
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: atk-devel >= 1.7.2
 BuildRequires: at-spi-devel
 Buildrequires: libgnomeui2-devel
